@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A66820C-B8BE-4EF2-89AE-79E17614CA9D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tarea2_Richard_Viquez</RootNamespace>
+    <AssemblyName>Tarea2_Richard_Viquez</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CamionConductorController.cs" />
+    <Compile Include="Controllers\CamionController.cs" />
+    <Compile Include="Controllers\ConductorController.cs" />
+    <Compile Include="Controllers\MensajeController.cs" />
+    <Compile Include="Controllers\SQLController.cs" />
+    <Compile Include="Modelos\CamionConductor.cs" />
+    <Compile Include="Modelos\Respuesta.cs" />
+    <Compile Include="Views\CamionesXConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CamionesXConductor.Designer.cs">
+      <DependentUpon>CamionesXConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CamionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CamionUI.Designer.cs">
+      <DependentUpon>CamionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConductorCamionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConductorCamionUI.Designer.cs">
+      <DependentUpon>ConductorCamionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConductorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConductorUI.Designer.cs">
+      <DependentUpon>ConductorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ExcepcionesController.cs" />
+    <Compile Include="Controllers\UIController.cs" />
+    <Compile Include="Modelos\Camion.cs" />
+    <Compile Include="Modelos\Conductor.cs" />
+    <Compile Include="Views\MessageBoxes\Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MessageBoxes\Error.Designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageBoxes\Succes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MessageBoxes\Succes.Designer.cs">
+      <DependentUpon>Succes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageBoxes\Warning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MessageBoxes\Warning.Designer.cs">
+      <DependentUpon>Warning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MostrarCamiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MostrarCamiones.Designer.cs">
+      <DependentUpon>MostrarCamiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MostrarConductores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MostrarConductores.Designer.cs">
+      <DependentUpon>MostrarConductores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Gradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Views\CamionesXConductor.resx">
+      <DependentUpon>CamionesXConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CamionUI.resx">
+      <DependentUpon>CamionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConductorCamionUI.resx">
+      <DependentUpon>ConductorCamionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConductorUI.resx">
+      <DependentUpon>ConductorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MessageBoxes\Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MessageBoxes\Succes.resx">
+      <DependentUpon>Succes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MessageBoxes\Warning.resx">
+      <DependentUpon>Warning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MostrarCamiones.resx">
+      <DependentUpon>MostrarCamiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MostrarConductores.resx">
+      <DependentUpon>MostrarConductores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transp1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dobleicoderecha.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rstaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izquierda.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
